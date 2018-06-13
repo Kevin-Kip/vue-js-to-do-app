@@ -2,7 +2,7 @@
   <div>
     <p align="center">Completed tasks: {{ todos.filter(todo => {return todo.completed === true}).length }} </p>
     <p align="center"> Pending tasks: {{ todos.filter(todo => {return todo.completed === false}).length }}</p>
-    <todo v-for="todoItem in todos" v-bind="todoItem" v-bind:key="todoItem.title"></todo>
+    <todo v-bind:todos="todos"></todo>
   </div>
 </template>
 
